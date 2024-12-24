@@ -28,6 +28,8 @@ export default function Home() {
         setArticles(data.articles || []);
       } catch (error) {
         console.error("Failed to fetch articles:", error);
+        setArticles([]);
+        setLoading(false);
       } finally {
         setLoading(false);
       }
